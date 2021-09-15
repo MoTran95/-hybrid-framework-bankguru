@@ -21,8 +21,6 @@ public class Level_01_Register_Login_Repeat_Yourself {
 	public void initBrowser() {
 		System.setProperty("webdriver.gecko.driver", "./browserDrivers/geckodriver");
 		driver = new FirefoxDriver();
-//		System.setProperty("webdriver.chrome.driver", "./browserDrivers/chromedriver");
-//		driver = new ChromeDriver();
 		driver.get("http://demo.guru99.com/v4/");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		loginPageUrl = driver.getCurrentUrl();
