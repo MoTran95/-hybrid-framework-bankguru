@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop Commerce" parallel="false">
+	<test name="Run on CHROME">
+		<classes>
+			<class name="com.nopcommerce.login.Level_03_Register_Login_Page_Object_3" />
+			
+		</classes>
+	</test>
+</suite>
