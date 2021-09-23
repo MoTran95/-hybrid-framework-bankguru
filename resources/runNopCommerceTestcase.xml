@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Nop Commerce" parallel="false">
+<parameter name = "url" value ="https://demo.nopcommerce.com/"/>
 	<test name="Run on CHROME">
+	<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.nopcommerce.login.Level_03_Register_Login_Page_Object_3" />
+			<class name="com.nopcommerce.login.Level_06_Register_Login_Page_Generator" />
 			
 		</classes>
 	</test>

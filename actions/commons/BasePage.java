@@ -288,9 +288,9 @@ public class BasePage {
 		}
 	}
 
-	public void waitForElementVisible(WebDriver driver,String locator) {
+	public void waitForElementVisible(WebDriver driver,String emailTextbox) {
 		explicitWait = new WebDriverWait(driver, timeout);
-		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(emailTextbox)));
 	}
 	public void waitForAllElementVisible(WebDriver driver,String locator) {
 		explicitWait = new WebDriverWait(driver, timeout);

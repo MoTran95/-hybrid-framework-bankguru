@@ -8,12 +8,14 @@ import commons.BasePage;
 public class LoginPageObject extends BasePage{
 
 	private WebDriver driver;
+	PageGeneratorManager pageGenerator;
 	public LoginPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	public void enterToEmailTextbox(String emailAddress) {
+	public LoginPageObject enterToEmailTextbox(String emailAddress) {
 		waitForElementClickable(driver, LoginPageUI.EMAIL_TEXTBOX);
 		sendKeysToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
+		return PageGeneratorManager.getLoginPage(driver); 
 	}
 
 	public void enterToPasswordTextbox(String password) {
@@ -21,9 +23,10 @@ public class LoginPageObject extends BasePage{
 		sendKeysToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 }

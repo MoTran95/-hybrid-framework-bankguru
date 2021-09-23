@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Live Guru" parallel="false">
+	<parameter name="url" value="https://live.demoguru99.com/index.php/" />
 	<test name="Run on FireFox">
+		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.liveguru.login.Level_03_Register_Login_Page_Object_3" />
+			<class name="com.liveguru.login.Level_04_Register_Login_Multiple_Browser" />
 		</classes>
 	</test>
+		<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.liveguru.login.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+	<test name="Run on Egde chromium">
+		<parameter name="browser" value="edge_chromium" />
+		<classes>
+			<class name="com.liveguru.login.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+
+
 </suite>
